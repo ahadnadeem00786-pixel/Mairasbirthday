@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Pacifico&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: radial-gradient(circle, #0b0006, #000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.container {
+  text-align: center;
+  z-index: 2;
+}
+
+.bow {
+  font-size: 80px;
+  animation: float 3s ease-in-out infinite;
+  margin-bottom: 20px;
+}
+
+.title {
+  color: #ff5fa2;
+  font-size: 22px;
+  text-shadow: 0 0 10px #ff2f92, 0 0 20px #ff2f92;
+  margin-bottom: 15px;
+}
+
+.subtitle {
+  font-family: 'Pacifico', cursive;
+  color: #ff3c7e;
+  font-size: 20px;
+  margin-bottom: 35px;
+}
+
+.enter-btn {
+  padding: 16px 28px;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(145deg, #ff4fa0, #ff2f7d);
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+  box-shadow: 0 0 15px #ff2f92;
+  animation: pulse 2s infinite;
+}
+
+.enter-btn:hover {
+  transform: scale(1.08);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 10px #ff2f92; }
+  50% { box-shadow: 0 0 25px #ff2f92; }
+  100% { box-shadow: 0 0 10px #ff2f92; }
+}
+
+/* Hearts animation */
+.hearts span {
+  position: absolute;
+  bottom: -20px;
+  font-size: 20px;
+  animation: rise linear infinite;
+}
+
+@keyframes rise {
+  to {
+    transform: translateY(-110vh);
+    opacity: 0;
+  }
+}
